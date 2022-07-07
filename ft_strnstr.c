@@ -6,7 +6,7 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:13:05 by yeongo            #+#    #+#             */
-/*   Updated: 2022/07/07 16:03:49 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 16:36:39 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	const char	*tmp_needle = needle;
 	size_t		tmp_len;
 
-	if (!needle)
-		return ((char *)haystack);
-	if (!*needle)
+	if (*needle == '\0')
 		return ((char *)haystack);
 	while (*haystack && len)
 	{
