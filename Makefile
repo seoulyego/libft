@@ -1,11 +1,8 @@
 AR = ar
 ARFLAGS = rcus
-
 CC = gcc
 CFLAGS = -Wall -Wextra -Werror -c
-
 NAME = libft.a
-
 SRCS1 = ft_isalpha.c			\
 		ft_isdigit.c			\
 		ft_isalnum.c			\
@@ -55,14 +52,19 @@ OBJS2 = $(SRCS2:.c=.o)
 %.o : %.c
 	$(CC) $(CFLAGS) -o $@ $<
 
+ifdef WITH_BONUS
+$(NAME) : $(OBJS1) $(OBJS2)
+	$(AR) $(ARFLAGS) $@ $^
+else
 $(NAME) : $(OBJS1)
 	$(AR) $(ARFLAGS) $@ $^
+endif
 
 .PHONY : all bonus clean fclean re
 all : $(NAME)
 
-bonus : $(NAME) $(OBJS2)
-	$(AR) $(ARFLAGS) $< $^
+bonus :
+	@make WITH_BONUS=1 all
 
 clean :
 	rm -rf $(OBJS1) $(OBJS2)

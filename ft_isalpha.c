@@ -6,11 +6,9 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 10:56:46 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/17 20:39:49 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 15:49:23 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include "libft.h"
 
 int	ft_isalpha(int c)
 {

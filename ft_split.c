@@ -6,12 +6,11 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:56:30 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/18 03:41:22 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 16:02:28 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 static int	free_all(char **result, int max_index)
 {

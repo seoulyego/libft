@@ -6,18 +6,20 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 19:29:09 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/18 03:40:18 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 15:50:09 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
-#include "libft.h"
 
 static unsigned int	ft_abs(int nbr)
 {
+	unsigned int	tmp_n;
+
+	tmp_n = 0;
 	if (nbr < 0)
-		return (-1 * nbr);
-	return (nbr);
+		return ((unsigned int)(tmp_n - nbr));
+	return ((unsigned int)nbr);
 }
 
 static size_t	check_digits(unsigned int abs_nbr)

@@ -6,7 +6,7 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/12 13:36:46 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/17 20:08:17 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 14:20:55 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,12 +14,9 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	t_list	*cur;
-
 	if (lst == NULL)
 		return (NULL);
-	cur = lst;
-	while (cur->next != NULL)
-		cur = cur->next;
-	return (cur);
+	while (lst->next != NULL)
+		lst = lst->next;
+	return (lst);
 }

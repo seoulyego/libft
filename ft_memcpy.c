@@ -6,19 +6,18 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 11:36:11 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/17 20:08:59 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 16:01:24 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
 void	*ft_memcpy(void *restrict dst, const void *restrict src, size_t n)
 {
-	char		*tmp_dst;
-	const char	*tmp_src;
+	unsigned char		*tmp_dst;
+	const unsigned char	*tmp_src = (const unsigned char *)src;
 
-	tmp_dst = (char *)dst;
-	tmp_src = (const char *)src;
+	tmp_dst = (unsigned char *)dst;
 	while (n--)
 		*tmp_dst++ = *tmp_src++;
 	return (dst);

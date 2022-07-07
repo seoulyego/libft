@@ -6,7 +6,7 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 11:02:46 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/20 17:33:18 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 14:33:20 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strdup(const char *s1)
 {
-	int		length;
+	size_t	length;
 	char	*result;
 
 	length = ft_strlen(s1);

@@ -6,35 +6,36 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/11 10:13:05 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/18 03:28:14 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/07 16:03:49 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stddef.h>
 
-char	*strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char	*tmp_haystack;
-	size_t	tmp_len;
-	int		idx_haystack;
-	int		idx_needle;
+	const char	*tmp_haystack = haystack;
+	const char	*tmp_needle = needle;
+	size_t		tmp_len;
 
-	tmp_haystack = (char *)haystack;
 	if (!needle)
-		return (tmp_haystack);
-	idx_haystack = 0;
-	while (tmp_haystack[idx_haystack])
+		return ((char *)haystack);
+	if (!*needle)
+		return ((char *)haystack);
+	while (*haystack && len)
 	{
-		tmp_len = 0;
-		idx_needle = 0;
-		while (tmp_haystack[idx_haystack + idx_needle] == \
-				needle[idx_needle] && tmp_len++ < len)
+		tmp_haystack = haystack;
+		tmp_needle = needle;
+		tmp_len = len;
+		while (*tmp_haystack && *tmp_needle == *tmp_haystack && tmp_len-- > 0)
 		{
-			if (!needle[idx_needle])
-				return (&tmp_haystack[idx_haystack]);
-			idx_needle++;
+			tmp_haystack++;
+			tmp_needle++;
 		}
-		idx_haystack++;
+		if (*tmp_needle == '\0')
+			return ((char *)haystack);
+		haystack++;
+		len--;
 	}
 	return (NULL);
 }
