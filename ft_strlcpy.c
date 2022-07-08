@@ -6,13 +6,13 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:15:39 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/18 03:37:23 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/08 09:08:06 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcpy(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	index;

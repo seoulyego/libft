@@ -6,13 +6,13 @@
 /*   By: yeongo <yeongo@student.42seoul.kr>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/05/10 17:27:40 by yeongo            #+#    #+#             */
-/*   Updated: 2022/05/17 20:32:41 by yeongo           ###   ########.fr       */
+/*   Updated: 2022/07/08 09:07:55 by yeongo           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlcat(char *restrict dst, const char *restrict src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	src_len;
 	size_t	dst_len;
